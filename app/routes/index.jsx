@@ -1,3 +1,10 @@
+export const headers = () => {
+  return {
+    // 2 minutes in browser, 5 minutes at cdn
+    "Cache-Control": "max-age=120, s-maxage=300",
+  };
+};
+
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
@@ -36,7 +43,7 @@ export default function Index() {
         <a
           href="https://render.com/docs/deploy-remix"
           rel="noreferrer"
-          style={{ textDecoration: 'none' }}
+          style={{ textDecoration: "none" }}
         >
           👈 back to Render's Remix Quickstart documentation
         </a>
